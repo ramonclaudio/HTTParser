@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://python.org" title="Go to Python homepage"><img src="https://img.shields.io/badge/Python-&gt;=3.x-lightgrey?logo=python&amp;logoColor=white" alt="Made with Python"></a>
+    <a href="https://python.org" title="Go to Python homepage"><img src="https://img.shields.io/badge/Python-&gt;=3.x-blue?logo=python&amp;logoColor=white" alt="Made with Python"></a>
 </p>
 
 <p align="center">
@@ -14,14 +14,12 @@
 </p>
 
 <p align="center">
-    <img width="450" height="200" src="https://raw.githubusercontent.com/RMNCLDYO/HTTParser/main/logo.png">
+    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/HTTParser/main/logo.png">
 </p>
 
 <p align="center">
     <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=HTTParser&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FHTTParser%2Fmain%2Fversion.json" alt="HTTParser">
 </p>
-
-# HTTParser
 
 ## Overview
 HTTParser is an open-source Python library designed for parsing web content using various HTTP methods. It allows for both static and dynamic content extraction, making it a versatile tool for web scraping and data retrieval tasks.
