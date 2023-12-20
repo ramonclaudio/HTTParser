@@ -14,11 +14,11 @@
 </p>
 
 <p align="center">
-    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/HTTParser/main/logo.png">
+    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/HTTParser/main/.github/logo.png">
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=HTTParser&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FHTTParser%2Fmain%2Fversion.json" alt="HTTParser">
+    <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=HTTParser&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FHTTParser%2Fmain%2F.github%2Fversion.json" alt="HTTParser">
 </p>
 
 ## Overview
@@ -170,10 +170,10 @@ print(response)
 HTTParser logs errors in 'Error.log'. Check this file for error details.
 
 ## Contributing
-Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](CONTRIBUTING.md).
+Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](.github/CONTRIBUTING.md).
 
 ## Reporting Issues
 Report issues via the GitHub issue tracker.
 
 ## License
-Licensed under the MIT License. See [LICENSE](LICENSE) for details.
+Licensed under the MIT License. See [LICENSE](.github/LICENSE) for details.
