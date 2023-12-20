@@ -39,14 +39,14 @@ This tool is valuable for anyone working with web scraping, API testing, or any 
 - Simple and intuitive interface for making HTTP requests.
 
 ## Available Variables
-- `url`: URL of the page to be parsed. <span style="color:red; font-size:8px">( *REQUIRED* )</span>
-- `method`: HTTP method, options: `"get"` or `"post"`. <span style="color:red; font-size:8px">( *REQUIRED* )</span>
-- `response_format`: Response format, options: `"js"`, `"json"`, or `"html"`. <span style="color:red; font-size:8px">( *REQUIRED* )</span>
-- `headers`: Custom HTTP headers, format: `{ "header_name": "header_value" }`. <span style="font-size:8px">( *OPTIONAL* )</span>
-- `params`: URL parameters, format: `{ "param_name": "param_value" }`. <span style="font-size:8px">( *OPTIONAL* )</span>
-- `payload`: Data payload for POST requests, format: `{ "payload_name": "payload_value" }`. <span style="font-size:8px">( *OPTIONAL* )</span>
-- `browser_path`: Path to the web browser, used for JavaScript rendering. <span style="font-size:8px">( *OPTIONAL* )</span>
-- `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <span style="font-size:8px">( *OPTIONAL* )</span>
+- `url`: URL of the page to be parsed. <sub>( *REQUIRED* )</sub>
+- `method`: HTTP method, options: `"get"` or `"post"`. <sub>( *REQUIRED* )</sub>
+- `response_format`: Response format, options: `"js"`, `"json"`, or `"html"`. <sub>( *REQUIRED* )</sub>
+- `headers`: Custom HTTP headers, format: `{ "header_name": "header_value" }`. <sub>( *OPTIONAL* )</sub>
+- `params`: URL parameters, format: `{ "param_name": "param_value" }`. <sub>( *OPTIONAL* )</sub>
+- `payload`: Data payload for POST requests, format: `{ "payload_name": "payload_value" }`. <sub>( *OPTIONAL* )</sub>
+- `browser_path`: Path to the web browser, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
+- `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
 
 ## Prerequisites (HTML & JSON Rendering)
 - Python 3.x
@@ -61,31 +61,31 @@ cd HTTParser
 pip install -r requirements.txt
 ```
 
-## Prerequisites (Dynamic Content Rendering with Javascript) <span style="color:#2ea44f; font-size:10px">( *OPTIONAL* )</span>
+## Prerequisites (Dynamic Content Rendering with Javascript) <sub>( *OPTIONAL* )</sub>
 - `selenium` package
 - Chromedriver
 - Compatible web browser (Chrome, Brave, Opera, etc...)
 
-### Installation <span style="color:#2ea44f; font-size:10px">( *OPTIONAL* )</span>
+### Installation <sub>( *OPTIONAL* )</sub>
 ```bash
 pip install selenium
 ```
 
-## Setting Up ChromeDriver and WebDrivers <span style="color:#2ea44f; font-size:10px">( *OPTIONAL* )</span>
+## Setting Up ChromeDriver and WebDrivers <sub>( *OPTIONAL* )</sub>
 
 To ensure HTTParser works effectively, especially for content that requires JavaScript rendering, you'll need to download and set up ChromeDriver and a compatible WebDriver.
 
-### Downloading ChromeDriver <span style="color:#2ea44f; font-size:10px">( *OPTIONAL* )</span>
+### Downloading ChromeDriver <sub>( *OPTIONAL* )</sub>
 
 1. Visit [ChromeDriver Downloads](https://chromedriver.chromium.org/downloads) to download the latest ChromeDriver.
 2. Choose the version that matches your Chrome browser's version. To check your browser version, navigate to 'Help > About Google Chrome' in your browser.
 3. Download the appropriate ChromeDriver for your operating system (Windows, Mac, or Linux).
 
-### Installing ChromeDriver <span style="color:#2ea44f; font-size:10px">( *OPTIONAL* )</span>
+### Installing ChromeDriver <sub>( *OPTIONAL* )</sub>
 
 Follow the detailed instructions on the [ChromeDriver Getting Started](https://chromedriver.chromium.org/getting-started) page for your specific operating system.
 
-### Choosing a Compatible WebDriver <span style="color:#2ea44f; font-size:10px">( *OPTIONAL* )</span>
+### Choosing a Compatible WebDriver <sub>( *OPTIONAL* )</sub>
 
 While ChromeDriver is designed for Chrome, you can also use it with other Chromium-based browsers. Here are some options:
 
@@ -168,10 +168,10 @@ print(response)
 HTTParser logs errors in 'Error.log'. Check this file for error details.
 
 ## Contributing
-Contributions are welcome. Please follow the guidelines in CONTRIBUTING.md[CONTRIBUTING.md].
+Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Reporting Issues
 Report issues via the GitHub issue tracker.
 
 ## License
-Licensed under the MIT License. See LICENSE.md[LICENSE.md] for details.
+Licensed under the MIT License. See [LICENSE](LICENSE.md) for details.
