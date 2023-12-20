@@ -176,4 +176,4 @@ Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](.githu
 Report issues via the GitHub issue tracker.
 
 ## License
-Licensed under the MIT License. See [LICENSE](.github/LICENSE) for details.
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
