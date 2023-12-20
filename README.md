@@ -58,7 +58,7 @@ This tool is valuable for anyone working with web scraping, API testing, or any 
 To install HTTParser, ensure you have Python 3.x installed. Then, you can install the repo via git clone:
 
 ```bash
-git clone https://github.com/yourusername/HTTParser.git
+git clone https://github.com/RMNCLDYO/HTTParser.git
 cd HTTParser
 pip install -r requirements.txt
 ```
