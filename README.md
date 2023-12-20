@@ -174,4 +174,4 @@ Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](CONTRI
 Report issues via the GitHub issue tracker.
 
 ## License
-Licensed under the MIT License. See [LICENSE](LICENSE.md) for details.
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
