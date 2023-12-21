@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=HTTParser&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FHTTParser%2Fmain%2F.github%2Fversion.json" alt="HTTParser">
+    <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FHTTParser%2Fmain%2F.github%2Fversion.json" alt="HTTParser">
 </p>
 
 ## Overview
