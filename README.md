@@ -43,7 +43,7 @@ This tool is valuable for anyone working with web scraping, API testing, or any 
 - `browser_path`: Path to the web browser, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
 - `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
 
-## Prerequisites (HTML & JSON Rendering)
+## Prerequisites
 - Python 3.x
 
 ### Installation
@@ -167,7 +167,7 @@ print(response)
 ```
 
 ## Error Handling
-HTTParser logs errors in 'Error.log'. Check this file for error details.
+HTTParser logs errors in `Error.log`. Check this file for error details.
 
 ## Contributing
 Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](.github/CONTRIBUTING.md).
