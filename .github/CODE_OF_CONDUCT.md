@@ -1,5 +1,4 @@
-
-# Code of Conduct for HTTParser
+# Code of Conduct
 
 ## Our Pledge
 
