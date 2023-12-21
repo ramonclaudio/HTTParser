@@ -1,8 +1,8 @@
-# Core dependencies for HTTParser
+# Core dependencies
 requests
 beautifulsoup4
 
-# Optional dependencies for handling dynamic content with JavaScript
+# Optional dependencies
 selenium
 
 # Additional dependencies may be added as needed
