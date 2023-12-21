@@ -24,16 +24,9 @@
 ## Overview
 HTTParser is an open-source Python library designed for parsing web content using various HTTP methods. It allows for both static and dynamic content extraction, making it a versatile tool for web scraping and data retrieval tasks.
 
-Key features include:
-- Customizable requests with various HTTP methods, headers, and parameters.
-- Parsing and processing of JSON and HTML data.
-- Handling dynamic web content using Selenium WebDriver.
-- Comprehensive error logging and handling mechanism.
-- Flexibility in response formats, facilitating integration with different types of web APIs or websites.
-
 This tool is valuable for anyone working with web scraping, API testing, or any application requiring advanced HTTP response handling and parsing. Its modular design allows for easy extension or modification to suit specific needs or handle various web content types.
 
-## Features
+## Key Features
 - Supports GET and POST methods.
 - Handles multiple response formats: JSON, HTML, JavaScript.
 - Customizable request headers, parameters, and payload.
@@ -52,16 +45,23 @@ This tool is valuable for anyone working with web scraping, API testing, or any 
 
 ## Prerequisites (HTML & JSON Rendering)
 - Python 3.x
-- `requests`, `beautifulsoup4` packages
 
 ### Installation
-To install HTTParser, ensure you have Python 3.x installed. Then, you can install the repo via git clone:
+To install HTTParser, clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/RMNCLDYO/HTTParser.git
 cd HTTParser
 pip install -r requirements.txt
 ```
+
+## Dependencies
+The following Python packages are required:
+- `requests`
+- `beautifulsoup4`
+
+The following Python packages are optional:
+- `selenium`
 
 ## Prerequisites (Dynamic Content Rendering with Javascript) <sub>( *OPTIONAL* )</sub>
 - `selenium` package
