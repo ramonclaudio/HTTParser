@@ -1,7 +1,6 @@
+# Contributing to the project!
 
-# Contributing to HTTParser
-
-We welcome contributions to HTTParser! This document provides guidelines and instructions for contributing to this project.
+We welcome contributions! This document provides guidelines and instructions for contributing to this project.
 
 ## Getting Started
 
@@ -21,7 +20,7 @@ We welcome contributions to HTTParser! This document provides guidelines and ins
 2. **Make Your Changes**: Implement your feature or fix.
 3. **Test Your Changes**: Ensure your changes do not break existing functionality.
 4. **Document Your Changes**: Update the README or documentation if necessary.
-5. **Submit a Pull Request**: Push your changes to your fork and open a pull request against the main HTTParser repository.
+5. **Submit a Pull Request**: Push your changes to your fork and open a pull request against the main repository.
 
 ## Reporting Issues
 
@@ -37,4 +36,4 @@ By contributing to this project, you agree to abide by its [Code of Conduct](COD
 
 Feel free to open an issue or contact the maintainers if you have any questions or suggestions.
 
-Thank you for contributing to HTTParser!
+Thank you for contributing!
