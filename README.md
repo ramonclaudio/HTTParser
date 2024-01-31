@@ -43,9 +43,6 @@ This tool is valuable for anyone working with web scraping, API testing, or any 
 - `browser_path`: Path to the web browser, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
 - `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
 
-## Prerequisites
-- Python 3.x
-
 ### Installation
 To install HTTParser, clone the repository and install dependencies:
 
@@ -55,13 +52,16 @@ cd HTTParser
 pip install -r requirements.txt
 ```
 
+## Prerequisites
+- `Python 3.x`
+
 ## Dependencies
 The following Python packages are required:
-- `requests`
-- `beautifulsoup4`
+- `requests`: For making HTTP requests.
+- `beautifulsoup4`: Library for parsing results.
 
 The following Python packages are optional:
-- `selenium`
+- `selenium`: Library for loading dynamic content.
 
 ## Prerequisites (Dynamic Content Rendering with Javascript) <sub>( *OPTIONAL* )</sub>
 - `selenium` package
