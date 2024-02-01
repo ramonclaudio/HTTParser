@@ -33,25 +33,6 @@ This tool is valuable for anyone working with web scraping, API testing, or any 
 - Option to parse dynamic content using Selenium WebDriver.
 - Simple and intuitive interface for making HTTP requests.
 
-## Available Variables
-- `url`: URL of the page to be parsed. <sub>( *REQUIRED* )</sub>
-- `method`: HTTP method, options: `"get"` or `"post"`. <sub>( *REQUIRED* )</sub>
-- `response_format`: Response format, options: `"js"`, `"json"`, or `"html"`. <sub>( *REQUIRED* )</sub>
-- `headers`: Custom HTTP headers, format: `{ "header_name": "header_value" }`. <sub>( *OPTIONAL* )</sub>
-- `params`: URL parameters, format: `{ "param_name": "param_value" }`. <sub>( *OPTIONAL* )</sub>
-- `payload`: Data payload for POST requests, format: `{ "payload_name": "payload_value" }`. <sub>( *OPTIONAL* )</sub>
-- `browser_path`: Path to the web browser, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
-- `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
-
-### Installation
-To install HTTParser, clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/RMNCLDYO/HTTParser.git
-cd HTTParser
-pip install -r requirements.txt
-```
-
 ## Prerequisites
 - `Python 3.x`
 
@@ -63,48 +44,33 @@ The following Python packages are required:
 The following Python packages are optional:
 - `selenium`: Library for loading dynamic content.
 
-## Prerequisites (Dynamic Content Rendering with Javascript) <sub>( *OPTIONAL* )</sub>
-- `selenium` package
-- Chromedriver
-- Compatible web browser (Chrome, Brave, Opera, etc...)
+### Installation
+To install HTTParser, clone the repository and install dependencies:
 
-### Installation <sub>( *OPTIONAL* )</sub>
 ```bash
-pip install selenium
+git clone https://github.com/RMNCLDYO/HTTParser.git
+cd HTTParser
+pip install -r requirements.txt
 ```
 
-## Setting Up ChromeDriver and WebDrivers <sub>( *OPTIONAL* )</sub>
-
-To ensure HTTParser works effectively, especially for content that requires JavaScript rendering, you'll need to download and set up ChromeDriver and a compatible WebDriver.
-
-### Downloading ChromeDriver <sub>( *OPTIONAL* )</sub>
-
-1. Visit [ChromeDriver Downloads](https://chromedriver.chromium.org/downloads) to download the latest ChromeDriver.
-2. Choose the version that matches your Chrome browser's version. To check your browser version, navigate to 'Help > About Google Chrome' in your browser.
-3. Download the appropriate ChromeDriver for your operating system (Windows, Mac, or Linux).
-
-### Installing ChromeDriver <sub>( *OPTIONAL* )</sub>
-
-Follow the detailed instructions on the [ChromeDriver Getting Started](https://chromedriver.chromium.org/getting-started) page for your specific operating system.
-
-### Choosing a Compatible WebDriver <sub>( *OPTIONAL* )</sub>
-
-While ChromeDriver is designed for Chrome, you can also use it with other Chromium-based browsers. Here are some options:
-
-- Google Chrome
-- Brave Browser
-- Opera Browser
-
-Visit [Supported WebDrivers](https://alternativeto.net/category/browsers/chromium-based/) to explore other Chromium-based browsers.
+## Available Variables
+- `url`: URL of the page to be parsed. <sub>( *REQUIRED* )</sub>
+- `method`: HTTP method, options: `"get"` or `"post"`. <sub>( *REQUIRED* )</sub>
+- `response_format`: Response format, options: `"js"`, `"json"`, or `"html"`. <sub>( *REQUIRED* )</sub>
+- `headers`: Custom HTTP headers, format: `{ "header_name": "header_value" }`. <sub>( *OPTIONAL* )</sub>
+- `params`: URL parameters, format: `{ "param_name": "param_value" }`. <sub>( *OPTIONAL* )</sub>
+- `payload`: Data payload for POST requests, format: `{ "payload_name": "payload_value" }`. <sub>( *OPTIONAL* )</sub>
+- `browser_path`: Path to the web browser, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
+- `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
 
 ## Usage
 
-### HTML Response Format
+### HTML Usage
 
+> GET Method
 ```python
 from httparser import HTTParser
 
-# Example: GET request for a simple HTML page
 request = HTTParser(
     url="https://httpbin.org/html",
     method="get",
@@ -115,13 +81,12 @@ response = request.response()
 print(response)
 ```
 
-### JSON Response Format
+### JSON Usage
 
-#### GET Request
+> GET Method
 ```python
 from httparser import HTTParser
 
-# Example: GET request for JSON data
 request = HTTParser(
     url="https://httpbin.org/json",
     method="get",
@@ -132,11 +97,10 @@ response = request.response()
 print(response)
 ```
 
-#### POST Request
+> POST Method
 ```python
 from httparser import HTTParser
 
-# Example: POST request to create new data
 request = HTTParser(
     url="https://httpbin.org/anything",
     method="post",
@@ -148,12 +112,12 @@ response = request.response()
 print(response)
 ```
 
-### JS Response Format
+### Dynamic (JS) Usage
 
+> GET Method
 ```python
 from httparser import HTTParser
 
-# Example: GET request for a page with dynamic JS content
 request = HTTParser(
     url="https://httpbin.org/delay/3",
     method="get",
@@ -165,6 +129,37 @@ request = HTTParser(
 response = request.response()
 print(response)
 ```
+
+## Dynamic Content Rendering with Javascript <sub>( * *optional* * )</sub>
+
+### Installation
+```bash
+pip install selenium
+```
+
+## Setting Up ChromeDriver and WebDrivers
+
+To ensure HTTParser works effectively, especially for content that requires JavaScript rendering, you'll need to download and set up ChromeDriver and a compatible WebDriver.
+
+### Choosing a Compatible WebDriver
+
+While ChromeDriver is designed for Chrome, you can also use it with other Chromium-based browsers. Here are some options:
+
+- `Google Chrome`
+- `Brave Browser`
+- `Opera Browser`
+
+Visit [Supported WebDrivers](https://alternativeto.net/category/browsers/chromium-based/) to explore other Chromium-based browsers.
+
+### Downloading ChromeDriver
+
+1. Visit [ChromeDriver Downloads](https://chromedriver.chromium.org/downloads) to download the latest ChromeDriver.
+2. Choose the version that matches your browser's version. To check your browser version, navigate to 'Help > About' in your browser.
+3. Download the appropriate ChromeDriver for your operating system (Windows, Mac, or Linux).
+
+### Installing ChromeDriver
+
+Follow the detailed instructions on the [ChromeDriver Getting Started](https://chromedriver.chromium.org/getting-started) page for your specific operating system.
 
 ## Error Handling
 HTTParser logs errors in `Error.log`. Check this file for error details.
