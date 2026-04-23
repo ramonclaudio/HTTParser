@@ -1,50 +1,10 @@
-<p align="center">
-    <a href="https://python.org" title="Go to Python homepage"><img src="https://img.shields.io/badge/Python-&gt;=3.x-blue?logo=python&amp;logoColor=white" alt="Made with Python"></a>
-</p>
+# HTTParser
 
-<p align="center">
-    <img src="https://img.shields.io/badge/maintained-yes-2ea44f" alt="maintained - yes">
-    <a href="/CONTRIBUTING.md" title="Go to contributions doc"><img src="https://img.shields.io/badge/contributions-welcome-2ea44f" alt="contributions - welcome"></a>
-</p>
+Every scraping project I'd write the same conditional: `requests` + BeautifulSoup for static pages, Selenium for JavaScript-heavy ones. Two implementations to maintain. I wanted one call with a format flag. So I built this.
 
-<p align="center">
-    <a href="https://pypi.org/project/requests"><img src="https://img.shields.io/badge/dependency-requests-critical" alt="dependency - requests"></a>
-    <a href="https://pypi.org/project/beautifulsoup4"><img src="https://img.shields.io/badge/dependency-beautifulsoup4-critical" alt="dependency - beautifulsoup4"></a>
-    <a href="https://pypi.org/project/selenium"><img src="https://img.shields.io/badge/dependency-selenium-yellow" alt="dependency - selenium"></a>
-</p>
+Python library for parsing web content over HTTP, with optional JavaScript rendering via Selenium.
 
-<p align="center">
-    <img width="450" src="https://raw.githubusercontent.com/ramonclaudio/HTTParser/main/.github/assets/logo.png">
-</p>
-
-<p align="center">
-</p>
-
-## Overview
-HTTParser is an open-source Python library designed for parsing web content using various HTTP methods. It allows for both static and dynamic content extraction, making it a versatile tool for web scraping and data retrieval tasks.
-
-This tool is valuable for anyone working with web scraping, API testing, or any application requiring advanced HTTP response handling and parsing. Its modular design allows for easy extension or modification to suit specific needs or handle various web content types.
-
-## Key Features
-- Supports GET and POST methods.
-- Handles multiple response formats: JSON, HTML, JavaScript.
-- Customizable request headers, parameters, and payload.
-- Option to parse dynamic content using Selenium WebDriver.
-- Simple and intuitive interface for making HTTP requests.
-
-## Prerequisites
-- `Python 3.x`
-
-## Dependencies
-The following Python packages are required:
-- `requests`: For making HTTP requests.
-- `beautifulsoup4`: Library for parsing results.
-
-The following Python packages are optional:
-- `selenium`: Library for loading dynamic content.
-
-### Installation
-To install HTTParser, clone the repository and install dependencies:
+## Install
 
 ```bash
 git clone https://github.com/ramonclaudio/HTTParser.git
@@ -52,147 +12,77 @@ cd HTTParser
 pip install -r requirements.txt
 ```
 
-## Available Variables
-- `url`: URL of the page to be parsed. <sub>( *REQUIRED* )</sub>
-- `method`: HTTP method, options: `"get"` or `"post"`. <sub>( *REQUIRED* )</sub>
-- `response_format`: Response format, options: `"js"`, `"json"`, or `"html"`. <sub>( *REQUIRED* )</sub>
-- `headers`: Custom HTTP headers, format: `{ "header_name": "header_value" }`. <sub>( *OPTIONAL* )</sub>
-- `params`: URL parameters, format: `{ "param_name": "param_value" }`. <sub>( *OPTIONAL* )</sub>
-- `payload`: Data payload for POST requests, format: `{ "payload_name": "payload_value" }`. <sub>( *OPTIONAL* )</sub>
-- `browser_path`: Path to the web browser, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
-- `chromedriver_path`: Path to ChromeDriver, used for JavaScript rendering. <sub>( *OPTIONAL* )</sub>
+Optional for JavaScript rendering:
 
-## Usage
-
-### HTML Usage
-
-> GET Method
-```python
-from httparser import HTTParser
-
-request = HTTParser(
-    url="https://httpbin.org/html",
-    method="get",
-    response_format="html"
-)
-
-response = request.response()
-print(response)
-```
-
-### JSON Usage
-
-> GET Method
-```python
-from httparser import HTTParser
-
-request = HTTParser(
-    url="https://httpbin.org/json",
-    method="get",
-    response_format="json"
-)
-
-response = request.response()
-print(response)
-```
-
-> POST Method
-```python
-from httparser import HTTParser
-
-request = HTTParser(
-    url="https://httpbin.org/anything",
-    method="post",
-    response_format="json",
-    payload={"HTTParser":"Example Payload"}
-)
-
-response = request.response()
-print(response)
-```
-
-### Dynamic (JS) Usage
-
-> GET Method
-```python
-from httparser import HTTParser
-
-request = HTTParser(
-    url="https://httpbin.org/delay/3",
-    method="get",
-    response_format="js",
-    browser_path="/path/to/browser",
-    chromedriver_path="/path/to/chromedriver"
-)
-
-response = request.response()
-print(response)
-```
-
-## Dynamic Content Rendering with Javascript <sub>( * *optional* * )</sub>
-
-### Installation
 ```bash
 pip install selenium
 ```
 
-## Setting Up ChromeDriver and WebDrivers
+## Usage
 
-To ensure HTTParser works effectively, especially for content that requires JavaScript rendering, you'll need to download and set up ChromeDriver and a compatible WebDriver.
+### HTML
 
-### Choosing a Compatible WebDriver
+```python
+from httparser import HTTParser
 
-While ChromeDriver is designed for Chrome, you can also use it with other Chromium-based browsers. Here are some options:
+r = HTTParser(url="https://httpbin.org/html", method="get", response_format="html")
+print(r.response())
+```
 
-- `Google Chrome`
-- `Brave Browser`
-- `Opera Browser`
+### JSON
 
-Visit [Supported WebDrivers](https://alternativeto.net/category/browsers/chromium-based/) to explore other Chromium-based browsers.
+```python
+from httparser import HTTParser
 
-### Downloading ChromeDriver
+# GET
+r = HTTParser(url="https://httpbin.org/json", method="get", response_format="json")
 
-1. Visit [ChromeDriver Downloads](https://chromedriver.chromium.org/downloads) to download the latest ChromeDriver.
-2. Choose the version that matches your browser's version. To check your browser version, navigate to 'Help > About' in your browser.
-3. Download the appropriate ChromeDriver for your operating system (Windows, Mac, or Linux).
+# POST
+r = HTTParser(
+    url="https://httpbin.org/anything",
+    method="post",
+    response_format="json",
+    payload={"key": "value"},
+)
+print(r.response())
+```
 
-### Installing ChromeDriver
+### JavaScript (dynamic)
 
-Follow the detailed instructions on the [ChromeDriver Getting Started](https://chromedriver.chromium.org/getting-started) page for your specific operating system.
+```python
+from httparser import HTTParser
 
-## Error Handling
-HTTParser logs errors in `Error.log`. Check this file for error details.
+r = HTTParser(
+    url="https://httpbin.org/delay/3",
+    method="get",
+    response_format="js",
+    browser_path="/path/to/browser",
+    chromedriver_path="/path/to/chromedriver",
+)
+print(r.response())
+```
 
-## Contributing
-Contributions are welcome!
+## Parameters
 
-Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for detailed guidelines on how to contribute to this project.
+| Parameter | Required | Format |
+| --- | --- | --- |
+| `url` | yes | string |
+| `method` | yes | `"get"` or `"post"` |
+| `response_format` | yes | `"html"`, `"json"`, or `"js"` |
+| `headers` | no | `{"header": "value"}` |
+| `params` | no | `{"param": "value"}` |
+| `payload` | no | `{"key": "value"}` (POST only) |
+| `browser_path` | no | path to any Chromium-based browser binary (`js` only) |
+| `chromedriver_path` | no | path to ChromeDriver (`js` only) |
 
-## Reporting Issues
-Encountered a bug? We'd love to hear about it. Please follow these steps to report any issues:
+## JavaScript rendering setup
 
-1. Check if the issue has already been reported.
-2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
-3. Submit the report [here](https://github.com/ramonclaudio/ramonclaudio/HTTParser/issues).
+Download ChromeDriver at https://chromedriver.chromium.org/downloads matching your browser version. Works with Chrome, Chromium, Edge, Brave, Arc, Dia, Vivaldi, Opera, Helium, and other Chromium-based browsers.
 
-Your report will help us make the project better for everyone.
+## Errors
 
-## Feature Requests
-Got an idea for a new feature? Feel free to suggest it. Here's how:
-
-1. Check if the feature has already been suggested or implemented.
-2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
-3. Submit the request [here](https://github.com/ramonclaudio/HTTParser/issues).
-
-Your suggestions for improvements are always welcome.
-
-## Versioning and Changelog
-Stay up-to-date with the latest changes and improvements in each version:
-
-- [CHANGELOG.md](.github/CHANGELOG.md) provides detailed descriptions of each release.
-
-## Security
-Your security is important to us. If you discover a security vulnerability, please follow our responsible disclosure guidelines found in [SECURITY.md](.github/SECURITY.md). Please refrain from disclosing any vulnerabilities publicly until said vulnerability has been reported and addressed.
+Errors log to `Error.log`.
 
 ## License
-Licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+MIT
