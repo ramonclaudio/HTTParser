@@ -1,6 +1,6 @@
 # HTTParser
 
-Every scraping project I'd write the same conditional: `requests` + BeautifulSoup for static pages, Selenium for JavaScript-heavy ones. Two implementations to maintain. I wanted one call with a format flag. So I built this.
+Every time I needed to scrape or crawl a new site I'd end up writing the same boilerplate: `requests` for static pages, Selenium for JavaScript-heavy ones, BeautifulSoup for parsing. I made this so I don't have to keep redoing that every time. Import it, pass a format flag, done.
 
 Python library for parsing web content over HTTP, with optional JavaScript rendering via Selenium.
 
