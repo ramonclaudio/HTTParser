@@ -14,11 +14,11 @@
 </p>
 
 <p align="center">
-    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/HTTParser/main/.github/logo.png">
+    <img width="450" src="https://raw.githubusercontent.com/ramonclaudio/HTTParser/main/.github/logo.png">
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FHTTParser%2Fmain%2F.github%2Fversion.json" alt="HTTParser">
+    <img src="https://img.shields.io/badge/dynamic/json?label=HTTParser&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRamon Claudio%2FHTTParser%2Fmain%2F.github%2Fversion.json" alt="HTTParser">
 </p>
 
 ## Overview
@@ -48,7 +48,7 @@ The following Python packages are optional:
 To install HTTParser, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/RMNCLDYO/HTTParser.git
+git clone https://github.com/ramonclaudio/HTTParser.git
 cd HTTParser
 pip install -r requirements.txt
 ```
@@ -174,7 +174,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 
 1. Check if the issue has already been reported.
 2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
-3. Submit the report [here](https://github.com/RMNCLDYO/RMNCLDYO/HTTParser/issues).
+3. Submit the report [here](https://github.com/ramonclaudio/Ramon Claudio/HTTParser/issues).
 
 Your report will help us make the project better for everyone.
 
@@ -183,7 +183,7 @@ Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 1. Check if the feature has already been suggested or implemented.
 2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
-3. Submit the request [here](https://github.com/RMNCLDYO/HTTParser/issues).
+3. Submit the request [here](https://github.com/ramonclaudio/HTTParser/issues).
 
 Your suggestions for improvements are always welcome.
 
