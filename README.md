@@ -174,7 +174,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 
 1. Check if the issue has already been reported.
 2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
-3. Submit the report [here](https://github.com/ramonclaudio/Ramon Claudio/HTTParser/issues).
+3. Submit the report [here](https://github.com/ramonclaudio/ramonclaudio/HTTParser/issues).
 
 Your report will help us make the project better for everyone.
 
